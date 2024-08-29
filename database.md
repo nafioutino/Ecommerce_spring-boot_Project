@@ -69,5 +69,5 @@ Voici une explication des différnetes valeurs qu'on peut attribuer:
 
 ## Schéma d'une BDD
 
-Le `schema` d'une BDD est une représentation de la structure logique des données,
+Le `schema` d'une BDD est une représentation de la structure logique des données, incluant les tables , les colonnes, les relations entre les tables et les contraintes . Il définit comment les données sont organisées, interconnectées,et géréés pour assurer leur cohérence et intégrité.
 

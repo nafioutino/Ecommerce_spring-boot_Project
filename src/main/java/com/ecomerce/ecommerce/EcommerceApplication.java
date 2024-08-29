@@ -24,13 +24,14 @@ public class EcommerceApplication {
 			User johndoe = User.builder()
 							.email("johndoe@gmail.com")
 							.username("John Doe")
-							.password("123")
+							.password("222")
 							.createdAt(LocalDateTime.now())
 							.updatedAt(LocalDateTime.now())
 							.build();
-							User john = new User(null, "John Doe","johndoe@gmail.com","123", LocalDateTime.now(), LocalDateTime.now());
+							User jane = new User(null, "Jane Doe","janedoe@gmail.com","123", LocalDateTime.now(), LocalDateTime.now());
 
-							userRepository.save(john);
+							userRepository.save(jane);
+							userRepository.save(johndoe);
 
 		};
 	}
