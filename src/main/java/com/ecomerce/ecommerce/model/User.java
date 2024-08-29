@@ -4,7 +4,11 @@ import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 // import lombok.EqualsAndHashCode;
 // import lombok.Getter;
@@ -19,8 +23,11 @@ import lombok.Data;
  @RequiredArgsConstructor
 */
 
+@Builder
 @Data  // générer getter setter toString hashcode et constructeurs
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
     @Id
     @GeneratedValue
