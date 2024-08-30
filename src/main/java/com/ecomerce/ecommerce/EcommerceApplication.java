@@ -1,6 +1,7 @@
 package com.ecomerce.ecommerce;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,21 +18,38 @@ public class EcommerceApplication {
 		SpringApplication.run(EcommerceApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner demo(UserRepository userRepository){
-		return (args)->{
+	@Bean // permet de créer un objet et de le rendre disponible dans le contexte Spring
+	public CommandLineRunner demo(UserRepository userRepository) {
+		return (args) -> {
 			// sauvegarder John Doe dans la BDD
 			User johndoe = User.builder()
-							.email("johndoe@gmail.com")
-							.username("John Doe")
-							.password("222")
-							.createdAt(LocalDateTime.now())
-							.updatedAt(LocalDateTime.now())
-							.build();
-							User jane = new User(null, "Jane Doe","janedoe@gmail.com","123", LocalDateTime.now(), LocalDateTime.now());
+					.email("johndoe@gmail.com")
+					.username("John Doe")
+					.password("222")
+					.createdAt(LocalDateTime.now())
+					.updatedAt(LocalDateTime.now())
+					.build();
+			User jane = new User(
+					null,
+					"Jane Doe",
+					"janedoe@gmail.com",
+					"123",
+					LocalDateTime.now(),
+					LocalDateTime.now(),
+					new ArrayList<>());
 
-							userRepository.save(jane);
-							userRepository.save(johndoe);
+			User yasmine = new User(
+					null,
+					"yasmine Doe",
+					"yasminedoe@gmail.com",
+					"123",
+					null,
+					null, 
+					new ArrayList<>());
+
+			userRepository.save(jane);
+			userRepository.save(johndoe);
+			userRepository.save(yasmine);
 
 		};
 	}
