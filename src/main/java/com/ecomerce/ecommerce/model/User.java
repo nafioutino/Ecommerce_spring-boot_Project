@@ -69,6 +69,8 @@ public class User {
     private List<Order> orders ;
     /**
      * @OneToMany : une relation de type OneToMany signifie qu'un utilisateur peut avoir plusieurs commandes, mais une commande ne peut appartenir qu'à un seul utilisateur.
+     * @PrePersist : c'est une annotation de JPA qui permet de définir une méthode qui sera exécutée avant la création d'un objet persistant dans la base de données.
+     * @PreUpdate : c'est une annotation de JPA qui permet de définir une méthode qui sera exécutée avant la mise à jour d'un objet persistant dans la base de données.
      */
 
 

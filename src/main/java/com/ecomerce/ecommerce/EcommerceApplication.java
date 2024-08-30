@@ -21,7 +21,7 @@ public class EcommerceApplication {
 	@Bean // permet de créer un objet et de le rendre disponible dans le contexte Spring
 	public CommandLineRunner demo(UserRepository userRepository) {
 		return (args) -> {
-			// sauvegarder John Doe dans la BDD
+			// Création de trois utilisateurs
 			User johndoe = User.builder()
 					.email("johndoe@gmail.com")
 					.username("John Doe")
@@ -45,7 +45,7 @@ public class EcommerceApplication {
 					"123",
 					null,
 					null, 
-					new ArrayList<>());
+					new ArrayList<>()); // ajouter une liste vide pour l'instant
 
 			userRepository.save(jane);
 			userRepository.save(johndoe);
