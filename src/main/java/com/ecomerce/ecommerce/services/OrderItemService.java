@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.ecomerce.ecommerce.model.OrderItem;
 import com.ecomerce.ecommerce.repositories.OrderItemRepository;
-import com.ecomerce.ecommerce.repositories.UserRepository;
 
 @Service
 public class OrderItemService {

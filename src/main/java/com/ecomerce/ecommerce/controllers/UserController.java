@@ -14,13 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ecomerce.ecommerce.model.User;
-import com.ecomerce.ecommerce.repositories.UserRepository;
 import com.ecomerce.ecommerce.services.UserService;
 
 @RestController // indique que cette classe est un contrôleur REST c'est-à-dire qu'elle gère les
                 // requêtes HTTP
                 // classe qui gère les requêtes HTTP
-@RequestMapping("/users") // indique la route par défaut pour toutes les requêtes HTTP
+@RequestMapping("/api/users") // indique la route par défaut pour toutes les requêtes HTTP
 public class UserController {
 
     @Autowired
